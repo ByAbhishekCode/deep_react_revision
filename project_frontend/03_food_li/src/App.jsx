@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import FoodItem from "./componets/foodItem";
+import ErrorMessage from "./componets/errorMessage";
 function App() {
   let foodItem = ['daal','chawal','roti','sabji','sweetes','water','hotwater']
   // let foodItem = []
@@ -6,11 +8,8 @@ function App() {
   return (
     <>
       <h1>Healthy Food</h1>
-      {foodItem.length === 0 ? <h3>I am Hungry</h3> : null }
-      <ul>
-      {foodItem.map((item)=><li key={item} className="list-group—item">{item}</li>)}
-        
-      </ul>
+      <ErrorMessage bhojan = {foodItem}></ErrorMessage>
+      <FoodItem bhojan ={foodItem}></FoodItem>
     </>
   );
 }
