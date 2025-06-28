@@ -1,3 +1,4 @@
+import { MdDeleteForever } from "react-icons/md";
 function TodoItem({ todoName, todoDate, onDeteleClick }) {
   return (
     <div className="container">
@@ -8,9 +9,9 @@ function TodoItem({ todoName, todoDate, onDeteleClick }) {
           <button
             type="button"
             className="btn btn-danger kg-button"
-            onClick={()=>onDeteleClick(todoName)}
+            onClick={() => onDeteleClick(todoName)}
           >
-            Delete
+            <MdDeleteForever />
           </button>
         </div>
       </div>

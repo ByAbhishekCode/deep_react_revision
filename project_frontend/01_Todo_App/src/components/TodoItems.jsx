@@ -6,6 +6,7 @@ const TodoItems = ({ todoItems, onDeteleClick }) => {
     <div className={styles.itemsContainer}>
       {todoItems.map((item) => (
         <TodoItem
+          
           key={item.name}
           todoDate={item.dueDate}
           todoName={item.name}
