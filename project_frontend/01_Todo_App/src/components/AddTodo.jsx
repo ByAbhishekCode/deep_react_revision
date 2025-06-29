@@ -1,13 +1,11 @@
 import { useContext, useRef, useState } from "react";
-import { IoMdAdd } from "react-icons/io";
 import { TodoItemsContext } from "../store/todo-items-store";
 
 function AddTodo() {
   const { addNewItem } = useContext(TodoItemsContext);
-  // const todoNameElement = useRef();
-  // const dueDateElement = useRef();
-  const [todoName, setTodoName] = useState();
-  const [dueDate, setDueDate] = useState();
+
+  const [todoName, setTodoName] = useState("");
+  const [dueDate, setDueDate] = useState("");
 
   const handleNameChange = (event) => {
     setTodoName(event.target.value);

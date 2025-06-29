@@ -6,13 +6,10 @@ import styles from "./TodoItems.module.css";
 
 const TodoItems = () => {
   const {todoItems} = useContext(TodoItemsContext)
-  console.log(todoItems)
-  TodoItemsContext
   return (
     <div className={styles.itemsContainer}>
       {todoItems.map((item) => (
         <TodoItem
-          
           key={item.name}
           todoDate={item.dueDate}
           todoName={item.name}
